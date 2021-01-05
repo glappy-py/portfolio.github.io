@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#circleImg{
+    position: absolute;
+    width: 179px;
+    height: 180px;
+    left: 630px;
+    top: 70px;
+    filter: drop-shadow(11px 10px 5px rgba(0, 0, 0, 0.25));
+}
+#HBDtext{
+    position: absolute;
+    width: 360px;
+    height: 42px;
+    left: 540px;
+    top: 310px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+}
+#vector1{
+    position: absolute;
+    width: 342.89px;
+    height: 440.19px;
+}
+#vector2{
+    position: absolute;
+    width: 342.89px;
+    height: 440.19px;
+    left: 900px;
+    transform: rotate(90deg);
+}
+#vector3{
+    position: absolute;
+    width: 1438px;
+    height: 307px;
+    left: 0px;
+    top: 450px;
+}
+#divider{
+    position: absolute;
+    width: 1438px;
+    height: 79px;
+    left: 0px;
+    top: 755px;
+}
+#landscape{
+    position: absolute;
+    width: 1438px;
+    height: 602px;
+    left: 0px;
+    top: 780px;
+}
+#wish{
+    position: absolute;
+    width: 614px;
+    height: 262px;
+    left: 413px;
+    top: 1600px;
+}
+#joke{
+    position: absolute;
+    width: 553px;
+    height: 28px;
+    left: 863px;
+    top: 2000px;
+}
+#vector4{
+    position: absolute;
+    width: 342.89px;
+    height: 440.19px;
+    left: 30px;
+    top: 1600px;
+}
+#vector5{
+    position: absolute;
+    width: 342.89px;
+    height: 440.19px;
+    left: 970px;
+    top: 1400px;
+    transform: rotate(90deg);
+}
