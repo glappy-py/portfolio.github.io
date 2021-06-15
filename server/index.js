@@ -1,6 +1,5 @@
 const fs = require("fs");
 const express = require("express");
-const { count } = require("console");
 const app = express();
 const PORT = 8080;
 app.use(express.static(__dirname));
@@ -29,7 +28,7 @@ app.get("/projects", (req, res) => {
 });
 // counter endpoint
 app.get("/getcount", (req, res) => {
-  let count = fs.readFileSync("counter.txt");
+  let count = fs.readFileSync(__dirname + "/counter.txt");
   res.send(`<h1>${count}</h1>`);
 });
 
