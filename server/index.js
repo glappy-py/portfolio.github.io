@@ -14,7 +14,6 @@ const increaseCount = () => {
 app.get("/", (req, res) => {
   increaseCount();
   let count = fs.readFileSync(__dirname + "/counter.txt");
-  console.log(count);
   res.sendFile(__dirname + "/home.html");
 });
 
@@ -31,7 +30,7 @@ app.get("/projects", (req, res) => {
 app.get("/count", (req, res) => {
   // let count = fs.readFileSync(__dirname + "/counter.txt");
   // res.render("count", { count: count });
-  res.sendFile(__dirname + "/usercount.html");
+  res.sendFile(__dirname + "/usercounter.html");
 });
 
 app.listen(PORT, () => {
