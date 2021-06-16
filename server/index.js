@@ -29,7 +29,7 @@ app.get("/projects", (req, res) => {
 app.get("/count", (req, res) => {
   // let count = fs.readFileSync(__dirname + "/counter.txt");
   // res.render("count", { count: count });
-  res.sendFile(__dirname + "/views/usercount.html");
+  res.sendFile(__dirname + "/usercount.html");
 });
 
 app.listen(PORT, () => {
