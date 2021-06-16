@@ -13,6 +13,8 @@ const increaseCount = () => {
 // PATHS
 app.get("/", (req, res) => {
   increaseCount();
+  let count = fs.readFileSync(__dirname + "/counter.txt");
+  console.log(count);
   res.sendFile(__dirname + "/home.html");
 });
 
