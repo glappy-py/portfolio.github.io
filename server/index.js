@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 app.use(express.static(__dirname));
-
+app.set("view engine", "pug");
 const increaseCount = () => {
   let count = Number.parseInt(fs.readFileSync("counter.txt")) + 1;
   console.log(count);
@@ -17,7 +17,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  increaseCount();
   res.sendFile(__dirname + "/about.html");
 });
 app.get("/contact", (req, res) => {
@@ -27,9 +26,9 @@ app.get("/projects", (req, res) => {
   res.sendFile(__dirname + "/projects.html");
 });
 // counter endpoint
-app.get("/getcount", (req, res) => {
+app.get("/count", (req, res) => {
   let count = fs.readFileSync(__dirname + "/counter.txt");
-  res.send(`<h1>${count}</h1>`);
+  res.render("count", { count: count });
 });
 
 app.listen(PORT, () => {
