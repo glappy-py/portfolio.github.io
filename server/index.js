@@ -30,7 +30,8 @@ app.get("/projects", (req, res) => {
 // counter endpoint
 app.get("/count", (req, res) => {
   let count = fs.readFileSync(__dirname + "/counter.txt");
-  res.render("count", { count: count });
+  // res.render("count", { count: count });
+  res.send("Counter go boom !");
   // res.sendFile(__dirname + "/count.html");
 });
 
