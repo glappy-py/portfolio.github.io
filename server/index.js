@@ -25,7 +25,7 @@ app.get("/contact", (req, res) => {
   res.sendFile(__dirname + "/contact.html");
 });
 app.get("/projects", (req, res) => {
-  res.render("projects");
+  res.render("projects", { title: "jor se tatti or what" });
 });
 // counter endpoint
 app.get("/count", (req, res) => {
