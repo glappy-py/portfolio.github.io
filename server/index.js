@@ -27,9 +27,9 @@ app.get("/projects", (req, res) => {
 });
 // counter endpoint
 app.get("/count", (req, res) => {
-  // let count = fs.readFileSync(__dirname + "/counter.txt");
-  // res.render("count", { count: count });
-  res.sendFile(__dirname + "/count.html");
+  let count = fs.readFileSync(__dirname + "/counter.txt");
+  res.render("count", { count: count });
+  // res.sendFile(__dirname + "/count.html");
 });
 
 app.listen(PORT, () => {
