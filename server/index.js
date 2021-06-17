@@ -25,14 +25,14 @@ app.get("/contact", (req, res) => {
   res.sendFile(__dirname + "/contact.html");
 });
 app.get("/projects", (req, res) => {
-  res.sendFile(__dirname + "/projects.html");
+  res.render("projects");
 });
 // counter endpoint
 app.get("/count", (req, res) => {
   let count = fs.readFileSync(__dirname + "/counter.txt");
-  // res.render("count", { count: count });
+  res.render("count", { count: count });
   // res.send("Counter go boom !");
-  res.sendFile(__dirname + "/views/count.pug");
+  // res.sendFile(__dirname + "/views/count.html");
 });
 
 app.listen(PORT, () => {
