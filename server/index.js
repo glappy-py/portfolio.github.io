@@ -2,8 +2,10 @@ const fs = require("fs");
 const express = require("express");
 const app = express();
 const PORT = 8080;
+
 app.use(express.static(__dirname));
-// app.set("view engine", "pug");
+app.set("view engine", "pug");
+
 const increaseCount = () => {
   let count = Number.parseInt(fs.readFileSync("counter.txt")) + 1;
   console.log(count);
